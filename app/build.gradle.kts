@@ -27,7 +27,8 @@ sonar {
         property("sonar.projectKey", "gambit328_java-project-61")
         property("sonar.organization", "gambit328")
         property("sonar.host.url", "https://sonarcloud.io")
-        property("sonar.working.directory", "/app")
+//        property("sonar.working.directory", "/app")
+        property("sonar.projectBaseDir", "app")
     }
 }
 
