@@ -49,7 +49,8 @@ public class Progression implements Game {
 
             int correctAnswer = numbers[randomIndex];
             if (userAnswer != correctAnswer) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. "
+                        + "Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + username);
                 return;
             }

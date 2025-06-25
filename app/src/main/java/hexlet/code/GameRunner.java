@@ -1,7 +1,12 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import hexlet.code.Games.*;
+import hexlet.code.Games.Greeting;
+import hexlet.code.Games.Even;
+import hexlet.code.Games.Calc;
+import hexlet.code.Games.Gcd;
+import hexlet.code.Games.Progression;
+import hexlet.code.Games.Prime;
 
 public class GameRunner {
     private static String userName;

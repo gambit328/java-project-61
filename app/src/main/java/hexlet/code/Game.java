@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public interface Game {
     void play(Scanner scanner);
-    default int randomNumber(){
+    default int randomNumber() {
         Random random = new Random();
         return random.nextInt(100) + 1;
     }

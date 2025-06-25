@@ -25,7 +25,8 @@ public class Prime implements Game {
             String userAnswer = scanner.nextLine();
 
             if (!userAnswer.equals(correctAnswer)) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. "
+                        + "Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + username);
                 return;
             }
@@ -43,7 +44,7 @@ public class Prime implements Game {
         if (number < 2) {
             return false;
         }
-        for (int i = 2; i * i <= number ; i++) {
+        for (int i = 2; i * i <= number; i++) {
             if (number % i == 0) {
                 return false;
             }

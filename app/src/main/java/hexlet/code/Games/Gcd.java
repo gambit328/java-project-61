@@ -37,10 +37,11 @@ public class Gcd implements Game {
                 System.out.println("[ERROR] > need to enter number");
                 return;
             }
-            
+
             correctAnswer += gcd(number1, number2);
             if (userAnswer != correctAnswer) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. "
+                        + "Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + username);
                 return;
             }

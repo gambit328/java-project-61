@@ -48,6 +48,8 @@ public class Calc implements Game {
                     System.out.println(number1 + " / " + number2);
                     correctAnswer = (int) Math.round((double) number1 / number2);
                     break;
+                default:
+                    System.out.println("Ooops. Something wrong");
             }
 
             System.out.print("Your answer: ");
@@ -59,7 +61,8 @@ public class Calc implements Game {
             }
 
             if (userAnswer != correctAnswer) {
-                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. Correct answer was '" + correctAnswer + "'.");
+                System.out.println("'" + userAnswer + "'" + " is wrong answer :(. "
+                        + "Correct answer was '" + correctAnswer + "'.");
                 System.out.println("Let's try again, " + username);
                 return;
             }
