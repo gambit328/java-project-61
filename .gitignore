@@ -54,3 +54,6 @@ coverage-reports/
 *.jar
 *.war
 *.ear
+
+### exceptions ###
+!app/gradle/wrapper/gradle-wrapper.jar
