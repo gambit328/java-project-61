@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 import java.util.Arrays;
 
-public class Progression  {
+public class Progression {
     public static void play() {
         String[][] result = new String[Engine.getRounds()][2];
         System.out.println("What number is missing in this progression?");
@@ -25,8 +25,10 @@ public class Progression  {
             correctAnswer = numbers[randomIndex];
             numbers[randomIndex] = "..";
 
-            result[i] = new String[]{Arrays.toString(numbers).replaceAll("[\\[\\],]", ""),
-                    correctAnswer};
+            result[i] = new String[]{
+                    Arrays.toString(numbers)
+                            .replaceAll("[\\[\\],]", ""), correctAnswer
+            };
         }
 
         Engine.run(result);
