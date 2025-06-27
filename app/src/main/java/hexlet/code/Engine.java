@@ -28,7 +28,7 @@ public class Engine {
             System.out.println("Correct!");
         }
 
-        System.out.println("Congratulations, " + USER_NAME);
+        System.out.println("Congratulations, " + USER_NAME + "!");
     }
 
     private static boolean checkAnswer(String userInput, String correctAnswer) {
