@@ -13,7 +13,7 @@ public class Even {
 
             result[i] = new String[]{Integer.toString(number), (isEvenNumber(number)) ? "yes" : "no"};
         }
-        System.out.println("Answer 'yes' if number even otherwise answer 'no'.");
+        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         Engine.run(result);
     }
 
