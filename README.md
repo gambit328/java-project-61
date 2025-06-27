@@ -12,6 +12,11 @@ calc game
 
 <a href="https://asciinema.org/a/qjDFfgmacr4M1NVmEUxAMwpTN" target="_blank"><img src="https://asciinema.org/a/qjDFfgmacr4M1NVmEUxAMwpTN.svg" /></a>
 
+gcd game
+<a href="https://asciinema.org/a/SedL2iY22JiizNU5FrL8psFoG" target="_blank"><img src="https://asciinema.org/a/SedL2iY22JiizNU5FrL8psFoG.svg" /></a>
+
+<a href="https://asciinema.org/a/YEhm3z4mXJ9GAvaF0uuHGJGHr" target="_blank"><img src="https://asciinema.org/a/YEhm3z4mXJ9GAvaF0uuHGJGHr.svg" /></a>
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gambit328_java-project-61&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gambit328_java-project-61)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=gambit328_java-project-61&metric=bugs)](https://sonarcloud.io/summary/new_code?id=gambit328_java-project-61)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=gambit328_java-project-61&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=gambit328_java-project-61)
