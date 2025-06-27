@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class Progression {
     public static void play() {
         String[][] result = new String[Engine.getRounds()][2];
-        System.out.println("What number is missing in this progression?");
+        System.out.println("What number is missing in the progression?");
 
         for (int i = 0; i < result.length; i++) {
             String correctAnswer = "";
