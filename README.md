@@ -9,6 +9,7 @@ even game
 
 calc game
 <a href="https://asciinema.org/a/IKXEk3aDoa7J3E0eCZEsxziuN" target="_blank"><img src="https://asciinema.org/a/IKXEk3aDoa7J3E0eCZEsxziuN.svg" /></a>
+
 <a href="https://asciinema.org/a/qjDFfgmacr4M1NVmEUxAMwpTN" target="_blank"><img src="https://asciinema.org/a/qjDFfgmacr4M1NVmEUxAMwpTN.svg" /></a>
 
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=gambit328_java-project-61&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=gambit328_java-project-61)
