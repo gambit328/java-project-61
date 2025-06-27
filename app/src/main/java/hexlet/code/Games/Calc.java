@@ -15,7 +15,7 @@ public class Calc implements Game {
 
     @Override
     public void play(Scanner scanner) {
-        String[] operations = {"+", "-", "*", "/"};
+        String[] operations = {"+", "-", "*"};
 
         if (username == null) {
             username = Greeting.setUserName(scanner);
@@ -24,7 +24,7 @@ public class Calc implements Game {
         System.out.println("What is the result of the expression?");
 
         while (true) {
-            int randomChoice = random.nextInt(4);
+            int randomChoice = random.nextInt(operations.length);
             int userAnswer;
             int correctAnswer = 0;
             int number1 = randomNumber();
@@ -43,13 +43,6 @@ public class Calc implements Game {
                 case "*":
                     System.out.println(number1 + " * " + number2);
                     correctAnswer = number1 * number2;
-                    break;
-                case "/":
-                    System.out.println(number1 + " / " + number2);
-                    while (number2 == 0) {
-                        number2 = randomNumber();
-                    }
-                    correctAnswer = (int) Math.round((double) number1 / number2);
                     break;
                 default:
                     System.out.println("Ooops. Something wrong");
