@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class Progression implements Game {
     private int countCorrectAnswers = 0;
     private String username = GameRunner.getUserName();
+    private final Random random = new Random();
 
     @Override
     public void play(Scanner scanner) {
-        Random random = new Random();
         if (username == null) {
             username = Greeting.setUserName(scanner);
         }

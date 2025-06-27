@@ -11,10 +11,10 @@ import java.util.Scanner;
 public class Calc implements Game {
     private int countCorrectAnswers = 0;
     private String username = GameRunner.getUserName();
+    private final Random random = new Random();
 
     @Override
     public void play(Scanner scanner) {
-        Random random = new Random();
         String[] operations = {"+", "-", "*", "/"};
 
         if (username == null) {
@@ -46,6 +46,9 @@ public class Calc implements Game {
                     break;
                 case "/":
                     System.out.println(number1 + " / " + number2);
+                    while (number2 == 0) {
+                        number2 = randomNumber();
+                    }
                     correctAnswer = (int) Math.round((double) number1 / number2);
                     break;
                 default:
