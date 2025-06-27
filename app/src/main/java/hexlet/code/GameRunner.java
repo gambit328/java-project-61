@@ -8,7 +8,7 @@ import hexlet.code.Games.Gcd;
 import hexlet.code.Games.Progression;
 import hexlet.code.Games.Prime;
 
-public class GameRunner {
+public final class GameRunner {
 
     public void start() {
         Scanner scanner = new Scanner(System.in);

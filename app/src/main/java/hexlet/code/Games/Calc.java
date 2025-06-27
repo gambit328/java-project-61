@@ -7,7 +7,7 @@ public class Calc {
 
     public static void play() {
         String[] operations = {"+", "-", "*"};
-        String[][] result = new String[3][2];
+        String[][] result = new String[Engine.getRounds()][2];
 
         for (int i = 0; i < result.length; i++) {
             String randomOperation = operations[Utils.getRandomNumber(operations.length)];
