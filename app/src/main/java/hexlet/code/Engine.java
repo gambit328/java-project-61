@@ -21,7 +21,7 @@ public class Engine {
             if (!checkAnswer(userInput, correctAnswer)) {
                 System.out.println("'" + userInput + "'" + " is wrong answer :(. Correct answer was " + "'"
                         + correctAnswer + "'");
-                System.out.println("Let's try again, " + USER_NAME);
+                System.out.println("Let's try again, " + USER_NAME + "!");
                 return;
             }
 
