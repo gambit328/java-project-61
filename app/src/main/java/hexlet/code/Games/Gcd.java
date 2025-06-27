@@ -21,7 +21,7 @@ public class Gcd {
                 number2 = tmp;
             }
 
-            question += number1 + " and " + number2;
+            question += number1 + " " + number2;
             correctAnswer += gcd(number1, number2);
 
             result[i] = new String[]{question, Integer.toString(correctAnswer)};
