@@ -13,7 +13,7 @@ public class GameRunner {
     public void start() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\nPlease enter the game number and press Enter.");
+        System.out.println("Please enter the game number and press Enter.");
         System.out.println("""
             1 - Greet
             2 - Even

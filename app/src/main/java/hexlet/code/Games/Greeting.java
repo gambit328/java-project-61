@@ -12,7 +12,7 @@ public class Greeting {
             System.out.print("May I have your name? ");
             userName = SCANNER.nextLine().trim();
             if (!userName.isEmpty()) {
-                System.out.println("Hello, " + userName);
+                System.out.println("Hello, " + userName + "!");
                 return userName;
             }
         }
