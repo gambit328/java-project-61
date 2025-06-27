@@ -3,8 +3,9 @@ package hexlet.code.Games;
 import java.util.Scanner;
 
 public class Greeting {
+    private static final Scanner scanner = new Scanner(System.in);
 
-    public static String setUserName(Scanner scanner) {
+    public static String setUserName() {
         String userName;
 
         while (true) {

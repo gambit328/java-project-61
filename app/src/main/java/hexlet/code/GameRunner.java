@@ -9,7 +9,6 @@ import hexlet.code.Games.Progression;
 import hexlet.code.Games.Prime;
 
 public class GameRunner {
-    private static String userName;
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
@@ -32,27 +31,22 @@ public class GameRunner {
 
         switch (userChoice) {
             case "1":
-                userName = Greeting.setUserName(scanner);
+                Greeting.setUserName();
                 break;
             case "2":
-                Even evenGame = new Even();
-                evenGame.play(scanner);
+                Even.play();
                 break;
             case "3":
-                Calc calcGame = new Calc();
-                calcGame.play(scanner);
+                Calc.play();
                 break;
             case "4":
-                Gcd gcdGame = new Gcd();
-                gcdGame.play(scanner);
+                Gcd.play();
                 break;
             case "5":
-                Progression progression = new Progression();
-                progression.play(scanner);
+                Progression.play();
                 break;
             case "6":
-                Prime prime = new Prime();
-                prime.play(scanner);
+                Prime.play();
                 break;
             case "0":
                 System.out.println("Goodbye!");
@@ -64,7 +58,4 @@ public class GameRunner {
 
     }
 
-    public static String getUserName() {
-        return userName;
-    }
 }
