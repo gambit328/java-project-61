@@ -1,15 +1,12 @@
 package hexlet.code;
 
-import hexlet.code.Games.Greeting;
-
 import java.util.Scanner;
 
 public class Engine {
     private static final Scanner SCANNER = new Scanner(System.in);
-    private static final String USER_NAME = Greeting.setUserName();
     private static final int ROUNDS = 3;
 
-    public static void run(String[][] gameData) {
+    public static void run(String[][] gameData, String userName) {
         for (String[] arr : gameData) {
             String question = arr[0];
             String correctAnswer = arr[1];
@@ -21,14 +18,14 @@ public class Engine {
             if (!checkAnswer(userInput, correctAnswer)) {
                 System.out.println("'" + userInput + "'" + " is wrong answer :(. Correct answer was " + "'"
                         + correctAnswer + "'");
-                System.out.println("Let's try again, " + USER_NAME + "!");
+                System.out.println("Let's try again, " + userName + "!");
                 return;
             }
 
             System.out.println("Correct!");
         }
 
-        System.out.println("Congratulations, " + USER_NAME + "!");
+        System.out.println("Congratulations, " + userName + "!");
     }
 
     private static boolean checkAnswer(String userInput, String correctAnswer) {

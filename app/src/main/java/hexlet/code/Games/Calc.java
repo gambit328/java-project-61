@@ -5,7 +5,7 @@ import hexlet.code.Utils;
 
 public class Calc {
 
-    public static void play() {
+    public static void play(String userName) {
         String[] operations = {"+", "-", "*"};
         String[][] result = new String[Engine.getRounds()][2];
 
@@ -37,6 +37,6 @@ public class Calc {
         }
 
         System.out.println("What is the result of the expression?");
-        Engine.run(result);
+        Engine.run(result, userName);
     }
 }

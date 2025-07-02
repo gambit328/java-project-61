@@ -4,7 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
-    public static void play() {
+    public static void play(String userName) {
         String[][] result = new String[Engine.getRounds()][2];
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
@@ -15,7 +15,7 @@ public class Prime {
             result[i] = new String[]{Integer.toString(randomNumber), correctAnswer};
         }
 
-        Engine.run(result);
+        Engine.run(result, userName);
     }
 
     private static boolean isPrime(int number) {

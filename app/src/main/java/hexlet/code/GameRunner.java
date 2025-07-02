@@ -1,7 +1,7 @@
 package hexlet.code;
 
 import java.util.Scanner;
-import hexlet.code.Games.Greeting;
+
 import hexlet.code.Games.Even;
 import hexlet.code.Games.Calc;
 import hexlet.code.Games.Gcd;
@@ -28,25 +28,27 @@ public final class GameRunner {
         String userChoice = scanner.nextLine();
 
         System.out.println("Welcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String userName = scanner.nextLine();
+        System.out.println("Hello, " + userName);
 
         switch (userChoice) {
             case "1":
-                Greeting.setUserName();
                 break;
             case "2":
-                Even.play();
+                Even.play(userName);
                 break;
             case "3":
-                Calc.play();
+                Calc.play(userName);
                 break;
             case "4":
-                Gcd.play();
+                Gcd.play(userName);
                 break;
             case "5":
-                Progression.play();
+                Progression.play(userName);
                 break;
             case "6":
-                Prime.play();
+                Prime.play(userName);
                 break;
             case "0":
                 System.out.println("Goodbye!");

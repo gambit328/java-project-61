@@ -9,7 +9,7 @@ public class Progression {
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;
 
-    public static void play() {
+    public static void play(String userName) {
         String[][] result = new String[Engine.getRounds()][2];
         System.out.println("What number is missing in the progression?");
 
@@ -34,6 +34,6 @@ public class Progression {
             };
         }
 
-        Engine.run(result);
+        Engine.run(result, userName);
     }
 }
