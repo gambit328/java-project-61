@@ -19,6 +19,7 @@ public class Progression {
 
             String[] numbers = generateProgression(new String[length], randomIndex);
             String correctAnswer = numbers[randomIndex];
+            numbers[randomIndex] = "..";
 
             result[i] = new String[]{
                     Arrays.toString(numbers)
@@ -37,8 +38,6 @@ public class Progression {
             int prevNumber = Integer.parseInt(numbers[j - 1]);
             numbers[j] = Integer.toString(prevNumber + incrementNumber);
         }
-
-        numbers[randomIndex] = "..";
 
         return numbers;
     }
