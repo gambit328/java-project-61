@@ -52,7 +52,7 @@ public final class GameRunner {
                 System.out.println("Goodbye!");
                 break;
             default:
-                System.out.println("[ERROR] > incorrect entry. Try again.");
+                System.out.println("[ERROR] >" + userChoice +" incorrect entry. Try again.");
         }
         scanner.close();
 
