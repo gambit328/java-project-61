@@ -14,19 +14,11 @@ public class Progression {
         System.out.println("What number is missing in the progression?");
 
         for (int i = 0; i < result.length; i++) {
-            String correctAnswer = "";
-            String[] numbers = new String[Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH)];
-            int incrementNumber = Math.abs(Utils.getRandomNumber());
-            numbers[0] = Integer.toString(Utils.getRandomNumber());
-            int randomIndex = Utils.getRandomNumber(numbers.length);
+            int length = Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH);
+            int randomIndex = Utils.getRandomNumber(length);
 
-            for (int j = 1; j < numbers.length; j++) {
-                int prevNumber = Integer.parseInt(numbers[j - 1]);
-                numbers[j] = Integer.toString(prevNumber + incrementNumber);
-            }
-
-            correctAnswer = numbers[randomIndex];
-            numbers[randomIndex] = "..";
+            String[] numbers = generateProgression(new String[length], randomIndex);
+            String correctAnswer = numbers[randomIndex];
 
             result[i] = new String[]{
                     Arrays.toString(numbers)
@@ -35,5 +27,19 @@ public class Progression {
         }
 
         Engine.run(result, userName);
+    }
+
+    private static String[] generateProgression(String[] numbers, int randomIndex) {
+        int incrementNumber = Math.abs(Utils.getRandomNumber());
+        numbers[0] = Integer.toString(Utils.getRandomNumber());
+
+        for (int j = 1; j < numbers.length; j++) {
+            int prevNumber = Integer.parseInt(numbers[j - 1]);
+            numbers[j] = Integer.toString(prevNumber + incrementNumber);
+        }
+
+        numbers[randomIndex] = "..";
+
+        return numbers;
     }
 }
