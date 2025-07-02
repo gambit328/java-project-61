@@ -15,7 +15,7 @@ public class Engine {
             System.out.print("Your answer: ");
             String userInput = SCANNER.nextLine().toLowerCase().trim();
 
-            if (!checkAnswer(userInput, correctAnswer)) {
+            if (!correctAnswer.equals(userInput)) {
                 System.out.println("'" + userInput + "'" + " is wrong answer :(. Correct answer was " + "'"
                         + correctAnswer + "'");
                 System.out.println("Let's try again, " + userName + "!");
@@ -26,9 +26,5 @@ public class Engine {
         }
 
         System.out.println("Congratulations, " + userName + "!");
-    }
-
-    private static boolean checkAnswer(String userInput, String correctAnswer) {
-        return userInput.equals(correctAnswer);
     }
 }
