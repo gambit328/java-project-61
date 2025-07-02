@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
     private static final Scanner SCANNER = new Scanner(System.in);
-    private static final int ROUNDS = 3;
+    public static final int ROUNDS = 3;
 
     public static void run(String[][] gameData, String userName) {
         for (String[] arr : gameData) {
@@ -30,9 +30,5 @@ public class Engine {
 
     private static boolean checkAnswer(String userInput, String correctAnswer) {
         return userInput.equals(correctAnswer);
-    }
-
-    public static int getRounds() {
-        return ROUNDS;
     }
 }

@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class Even {
 
     public static void play(String userName) {
-        String[][] result = new String[Engine.getRounds()][2];
+        String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
             int number = Utils.getRandomNumber();
