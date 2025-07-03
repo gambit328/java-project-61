@@ -4,12 +4,13 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Even {
+    private static final int MAX_NUMBER = 50;
 
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
-            int number = Utils.getRandomNumber();
+            int number = Utils.getRandomNumber(MAX_NUMBER);
 
             result[i] = new String[]{Integer.toString(number), (isEvenNumber(number)) ? "yes" : "no"};
         }

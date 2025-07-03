@@ -8,14 +8,15 @@ import java.util.Arrays;
 public class Progression {
     private static final int MIN_LENGTH = 5;
     private static final int MAX_LENGTH = 10;
+    private static final int MAX_NUMBER = 50;
 
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
             int length = Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH);
-            int startNumber = Utils.getRandomNumber();
-            int stepProgression = Utils.getRandomNumber();
+            int startNumber = Utils.getRandomNumber(MAX_NUMBER);
+            int stepProgression = Utils.getRandomNumber(MAX_NUMBER);
             int randomIndex = Utils.getRandomNumber(length);
 
             String[] numbers = generateProgression(new String[length], startNumber, stepProgression);

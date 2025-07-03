@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Calc {
+    private static final int MAX_NUMBER = 50;
 
     public static void play(String userName) {
         String[][] result = generateExercise(new String[Engine.ROUNDS][2]);
@@ -17,8 +18,8 @@ public class Calc {
 
         for (int i = 0; i < result.length; i++) {
             String randomOperation = operations[Utils.getRandomNumber(operations.length)];
-            int number1 = Utils.getRandomNumber();
-            int number2 = Utils.getRandomNumber();
+            int number1 = Utils.getRandomNumber(MAX_NUMBER);
+            int number2 = Utils.getRandomNumber(MAX_NUMBER);
             int correctAnswer = 0;
             String question = "";
 

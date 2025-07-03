@@ -4,6 +4,7 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Gcd {
+    private static final int MAX_NUMBER = 50;
 
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
@@ -11,8 +12,8 @@ public class Gcd {
         for (int i = 0; i < result.length; i++) {
             String question = "";
             int correctAnswer = 0;
-            int number1 = Math.abs(Utils.getRandomNumber());
-            int number2 = Math.abs(Utils.getRandomNumber());
+            int number1 = Math.abs(Utils.getRandomNumber(MAX_NUMBER));
+            int number2 = Math.abs(Utils.getRandomNumber(MAX_NUMBER));
 
             if (number1 < number2) {
                 int tmp = number1;

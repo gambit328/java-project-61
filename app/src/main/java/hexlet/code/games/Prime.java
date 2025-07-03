@@ -4,11 +4,13 @@ import hexlet.code.Engine;
 import hexlet.code.Utils;
 
 public class Prime {
+    private static final int MAX_NUMBER = 50;
+
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
-            int randomNumber = Math.abs(Utils.getRandomNumber());
+            int randomNumber = Math.abs(Utils.getRandomNumber(MAX_NUMBER));
             String correctAnswer = (isPrime(randomNumber)) ? "yes" : "no";
 
             result[i] = new String[]{Integer.toString(randomNumber), correctAnswer};
