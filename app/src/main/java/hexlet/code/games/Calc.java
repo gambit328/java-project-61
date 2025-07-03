@@ -6,8 +6,14 @@ import hexlet.code.Utils;
 public class Calc {
 
     public static void play(String userName) {
+        String[][] result = generateExercise(new String[Engine.ROUNDS][2]);
+
+        String task = "What is the result of the expression?";
+        Engine.run(result, userName, task);
+    }
+
+    private static String[][] generateExercise(String[][] result) {
         String[] operations = {"+", "-", "*"};
-        String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
             String randomOperation = operations[Utils.getRandomNumber(operations.length)];
@@ -36,7 +42,6 @@ public class Calc {
             result[i] = new String[]{question, Integer.toString(correctAnswer)};
         }
 
-        String task = "What is the result of the expression?";
-        Engine.run(result, userName, task);
+        return result;
     }
 }
