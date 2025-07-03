@@ -11,7 +11,6 @@ public class Progression {
 
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
-        System.out.println("What number is missing in the progression?");
 
         for (int i = 0; i < result.length; i++) {
             int length = Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH);
@@ -27,7 +26,8 @@ public class Progression {
             };
         }
 
-        Engine.run(result, userName);
+        String task = "What number is missing in the progression?";
+        Engine.run(result, userName, task);
     }
 
     private static String[] generateProgression(String[] numbers, int randomIndex) {

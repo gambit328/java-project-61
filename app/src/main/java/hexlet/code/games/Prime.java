@@ -6,7 +6,6 @@ import hexlet.code.Utils;
 public class Prime {
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
 
         for (int i = 0; i < result.length; i++) {
             int randomNumber = Math.abs(Utils.getRandomNumber());
@@ -15,7 +14,8 @@ public class Prime {
             result[i] = new String[]{Integer.toString(randomNumber), correctAnswer};
         }
 
-        Engine.run(result, userName);
+        String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.run(result, userName, task);
     }
 
     private static boolean isPrime(int number) {

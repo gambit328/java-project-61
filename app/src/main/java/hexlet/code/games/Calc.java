@@ -36,7 +36,7 @@ public class Calc {
             result[i] = new String[]{question, Integer.toString(correctAnswer)};
         }
 
-        System.out.println("What is the result of the expression?");
-        Engine.run(result, userName);
+        String task = "What is the result of the expression?";
+        Engine.run(result, userName, task);
     }
 }

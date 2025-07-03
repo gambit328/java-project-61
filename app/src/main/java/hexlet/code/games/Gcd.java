@@ -7,7 +7,6 @@ public class Gcd {
 
     public static void play(String userName) {
         String[][] result = new String[Engine.ROUNDS][2];
-        System.out.println("Find the greatest common divisor of given numbers.");
 
         for (int i = 0; i < result.length; i++) {
             String question = "";
@@ -27,7 +26,8 @@ public class Gcd {
             result[i] = new String[]{question, Integer.toString(correctAnswer)};
         }
 
-        Engine.run(result, userName);
+        String task = "Find the greatest common divisor of given numbers.";
+        Engine.run(result, userName, task);
     }
 
     private static int gcd(int a, int b) {
