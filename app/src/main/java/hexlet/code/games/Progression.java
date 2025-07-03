@@ -14,9 +14,11 @@ public class Progression {
 
         for (int i = 0; i < result.length; i++) {
             int length = Utils.getRandomNumber(MIN_LENGTH, MAX_LENGTH);
+            int startNumber = Utils.getRandomNumber();
+            int stepProgression = Utils.getRandomNumber();
             int randomIndex = Utils.getRandomNumber(length);
 
-            String[] numbers = generateProgression(new String[length], randomIndex);
+            String[] numbers = generateProgression(new String[length], startNumber, stepProgression);
             String correctAnswer = numbers[randomIndex];
             numbers[randomIndex] = "..";
 
@@ -30,13 +32,12 @@ public class Progression {
         Engine.run(result, userName, task);
     }
 
-    private static String[] generateProgression(String[] numbers, int randomIndex) {
-        int incrementNumber = Math.abs(Utils.getRandomNumber());
-        numbers[0] = Integer.toString(Utils.getRandomNumber());
+    private static String[] generateProgression(String[] numbers, int startNumber, int stepProgression) {
+        numbers[0] = Integer.toString(startNumber);
 
         for (int j = 1; j < numbers.length; j++) {
             int prevNumber = Integer.parseInt(numbers[j - 1]);
-            numbers[j] = Integer.toString(prevNumber + incrementNumber);
+            numbers[j] = Integer.toString(prevNumber + stepProgression);
         }
 
         return numbers;
