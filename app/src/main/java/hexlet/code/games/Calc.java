@@ -42,7 +42,7 @@ public class Calc {
                 correctAnswer += number1 * number2;
                 break;
             default:
-                System.out.println("Ooops. Something wrong");
+                System.out.println("[ERROR] > " + randomOperation + " is not correct input.");
         }
 
         return new String[]{question, Integer.toString(correctAnswer)};
