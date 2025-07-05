@@ -14,17 +14,17 @@ public class Calc {
     }
 
     private static String[][] generateExercise(String[][] result) {
-        for (int i = 0; i < result.length; i++) {
-            result[i] = expressionCalculation();
-        }
-        return result;
-    }
-
-    private static String[] expressionCalculation() {
         String[] operations = {"+", "-", "*"};
         int number1 = Utils.getRandomNumber(MAX_NUMBER);
         int number2 = Utils.getRandomNumber(MAX_NUMBER);
         String randomOperation = operations[Utils.getRandomNumber(operations.length)];
+        for (int i = 0; i < result.length; i++) {
+            result[i] = expressionCalculation(randomOperation, number1, number2);
+        }
+        return result;
+    }
+
+    private static String[] expressionCalculation(String randomOperation, int number1, int number2) {
         int correctAnswer = 0;
         String question = "";
 
