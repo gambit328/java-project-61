@@ -14,35 +14,37 @@ public class Calc {
     }
 
     private static String[][] generateExercise(String[][] result) {
-        String[] operations = {"+", "-", "*"};
-
         for (int i = 0; i < result.length; i++) {
-            String randomOperation = operations[Utils.getRandomNumber(operations.length)];
-            int number1 = Utils.getRandomNumber(MAX_NUMBER);
-            int number2 = Utils.getRandomNumber(MAX_NUMBER);
-            int correctAnswer = 0;
-            String question = "";
+            result[i] = expressionCalculation();
+        }
+        return result;
+    }
 
-            switch (randomOperation) {
-                case "+":
-                    question += number1 + " + " + number2;
-                    correctAnswer += number1 + number2;
-                    break;
-                case "-":
-                    question += number1 + " - " + number2;
-                    correctAnswer += (number1 - number2);
-                    break;
-                case "*":
-                    question += number1 + " * " + number2;
-                    correctAnswer += number1 * number2;
-                    break;
-                default:
-                    System.out.println("Ooops. Something wrong");
-            }
+    private static String[] expressionCalculation() {
+        String[] operations = {"+", "-", "*"};
+        int number1 = Utils.getRandomNumber(MAX_NUMBER);
+        int number2 = Utils.getRandomNumber(MAX_NUMBER);
+        String randomOperation = operations[Utils.getRandomNumber(operations.length)];
+        int correctAnswer = 0;
+        String question = "";
 
-            result[i] = new String[]{question, Integer.toString(correctAnswer)};
+        switch (randomOperation) {
+            case "+":
+                question += number1 + " + " + number2;
+                correctAnswer += number1 + number2;
+                break;
+            case "-":
+                question += number1 + " - " + number2;
+                correctAnswer += (number1 - number2);
+                break;
+            case "*":
+                question += number1 + " * " + number2;
+                correctAnswer += number1 * number2;
+                break;
+            default:
+                System.out.println("Ooops. Something wrong");
         }
 
-        return result;
+        return new String[]{question, Integer.toString(correctAnswer)};
     }
 }
