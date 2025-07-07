@@ -10,7 +10,7 @@ public class Progression {
     private static final int MAX_LENGTH = 10;
     private static final int MAX_NUMBER = 50;
 
-    public static void play(String userName) {
+    public static void play() {
         String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
@@ -30,7 +30,7 @@ public class Progression {
         }
 
         String task = "What number is missing in the progression?";
-        Engine.run(result, userName, task);
+        Engine.run(result, task);
     }
 
     private static String[] generateProgression(int length, int startNumber, int stepProgression) {

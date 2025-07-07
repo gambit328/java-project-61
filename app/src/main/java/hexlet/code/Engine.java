@@ -6,7 +6,10 @@ public class Engine {
     private static final Scanner SCANNER = new Scanner(System.in);
     public static final int ROUNDS = 3;
 
-    public static void run(String[][] gameData, String userName, String task) {
+    public static void run(String[][] gameData, String task) {
+        Cli.greeting();
+        String userName = Cli.userName;
+
         System.out.println(task);
         for (String[] arr : gameData) {
             String question = arr[0];

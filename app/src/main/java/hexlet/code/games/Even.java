@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class Even {
     private static final int MAX_NUMBER = 50;
 
-    public static void play(String userName) {
+    public static void play() {
         String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
@@ -15,7 +15,7 @@ public class Even {
             result[i] = new String[]{Integer.toString(number), (isEvenNumber(number)) ? "yes" : "no"};
         }
         String task = "Answer 'yes' if the number is even, otherwise answer 'no'.";
-        Engine.run(result, userName, task);
+        Engine.run(result, task);
     }
 
     private static boolean isEvenNumber(int number) {

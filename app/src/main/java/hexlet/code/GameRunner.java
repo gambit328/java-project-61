@@ -27,28 +27,24 @@ public final class GameRunner {
         System.out.print("Your choice: ");
         String userChoice = scanner.nextLine();
 
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
-        String userName = scanner.nextLine();
-        System.out.println("Hello, " + userName + "!");
-
         switch (userChoice) {
             case "1":
+                Cli.greeting();
                 break;
             case "2":
-                Even.play(userName);
+                Even.play();
                 break;
             case "3":
-                Calc.play(userName);
+                Calc.play();
                 break;
             case "4":
-                Gcd.play(userName);
+                Gcd.play();
                 break;
             case "5":
-                Progression.play(userName);
+                Progression.play();
                 break;
             case "6":
-                Prime.play(userName);
+                Prime.play();
                 break;
             case "0":
                 System.out.println("Goodbye!");

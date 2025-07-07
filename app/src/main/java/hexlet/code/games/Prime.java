@@ -6,7 +6,7 @@ import hexlet.code.Utils;
 public class Prime {
     private static final int MAX_NUMBER = 50;
 
-    public static void play(String userName) {
+    public static void play() {
         String[][] result = new String[Engine.ROUNDS][2];
 
         for (int i = 0; i < result.length; i++) {
@@ -17,7 +17,7 @@ public class Prime {
         }
 
         String task = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-        Engine.run(result, userName, task);
+        Engine.run(result, task);
     }
 
     private static boolean isPrime(int number) {

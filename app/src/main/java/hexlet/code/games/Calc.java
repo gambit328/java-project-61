@@ -6,11 +6,11 @@ import hexlet.code.Utils;
 public class Calc {
     private static final int MAX_NUMBER = 50;
 
-    public static void play(String userName) {
+    public static void play() {
         String[][] result = generateExercise(new String[Engine.ROUNDS][2]);
 
         String task = "What is the result of the expression?";
-        Engine.run(result, userName, task);
+        Engine.run(result, task);
     }
 
     private static String[][] generateExercise(String[][] result) {
