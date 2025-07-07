@@ -8,7 +8,7 @@ public class Engine {
 
     public static void run(String[][] gameData, String task) {
         Cli.greeting();
-        String userName = Cli.userName;
+        String userName = Cli.getUserName();
 
         System.out.println(task);
         for (String[] arr : gameData) {
