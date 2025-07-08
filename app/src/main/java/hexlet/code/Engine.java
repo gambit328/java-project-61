@@ -11,7 +11,6 @@ public class Engine {
         System.out.print("May I have your name? ");
         String userName = SCANNER.nextLine();
         System.out.println("Hello, " + userName + "!");
-        
         System.out.println(task);
         for (String[] arr : gameData) {
             String question = arr[0];
